@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-b">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <title>Chat com ChatGPT</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+  <h1>Chat com ChatGPT (GPT-3.5)</h1>
+
+  <textarea id="pergunta" placeholder="Digite sua pergunta..."></textarea>
+  <div class="botoes">
+    <button onclick="enviarPergunta()">Enviar</button>
+    <button onclick="limparPergunta()">Limpar</button>
+  </div>
+
+  <div class="resposta" id="resposta"></div>
+  <button onclick="copiarResposta()" id="copiarBtn" style="display: none;">📋 Copiar Resposta</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
