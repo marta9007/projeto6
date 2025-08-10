@@ -2,20 +2,20 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <title>IA Deepseek</title>
+  <title>IA via OpenRouter</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Chat com Deepseek</h1>
+  <h1>Chat com IA</h1>
 
   <textarea id="pergunta" placeholder="Digite sua pergunta..."></textarea>
   <div class="botoes">
     <button id="enviarBtn">Enviar</button>
-    <button onclick="limparPergunta()">Limpar</button>
+    <button id="limparBtn">Limpar</button>
   </div>
 
   <div class="resposta" id="resposta"></div>
-  <button onclick="copiarResposta()" id="copiarBtn" style="display: none;">📋 Copiar Resposta</button>
+  <button id="copiarBtn" style="display: none;">📋 Copiar Resposta</button>
 
   <script src="script.js"></script>
 </body>
