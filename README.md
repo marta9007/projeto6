@@ -25,7 +25,10 @@ Este projeto é um assistente de inteligência artificial feito em **JavaScript*
 ---
 
 ## 📦 Como usar
+- Link do deploy: https://marta9007.github.io/projeto6/
 
+  ou
+  
 - git clone https://github.com/marta9007
 - Abra o arquivo index.html no navegador
 - Digite um Pergunta e clique em Pesquisar **(Estamos usando uma API gratuita e esta possui poucos créditos diários para pesquisa)**
@@ -235,5 +238,6 @@ funcional que:
 
 Este projeto serve como uma excelente base para entender como construir aplicações web
 modernas usando tecnologias fundamentais da web!
+
 
 
