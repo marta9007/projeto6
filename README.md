@@ -52,7 +52,7 @@ Este projeto foi desenvolvido de forma simples, permitindo aprender sobre:
 - [Jeferson valentim](https://github.com/jefersonvalentimvenancio)
 - [Marta_Gomes](https://github.com/marta9007)
 - [Nediane Silva Dos Prazeres](https://github.com/NedianePrazeres)
-- [Andrelis](https://github.com/Andrelissg)
+
 
 <br>
 
@@ -235,4 +235,5 @@ funcional que:
 
 Este projeto serve como uma excelente base para entender como construir aplicações web
 modernas usando tecnologias fundamentais da web!
+
 
