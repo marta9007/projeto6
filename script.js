@@ -1,4 +1,4 @@
-const API_KEY = "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";
+const API_KEY = "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";
 const MODEL = "openai/gpt-3.5-turbo"; // você pode trocar por outro modelo aqui
 
 document.getElementById("enviarBtn").addEventListener("click", enviarPergunta);
