@@ -1,5 +1,5 @@
-const API_KEY = "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";
-const MODEL = "openai/gpt-3.5-turbo"; // você pode trocar por outro modelo aqui
+const API_KEY = "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";
+const MODEL = "deepseek/deepseek-r1:free"; // você pode trocar por outro modelo aqui
 
 document.getElementById("enviarBtn").addEventListener("click", enviarPergunta);
 document.getElementById("limparBtn").addEventListener("click", limparPergunta);
