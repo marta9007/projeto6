@@ -1,0 +1,8 @@
+/* Estilos específicos do chat */
+textarea {
+  min-height: 120px;
+}
+.resposta {
+  min-height: 50px;
+  white-space: pre-wrap;
+}

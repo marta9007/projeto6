@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chat IA Responsivo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>💬 Chat com IA</h1>
+      <button id="themeToggle" aria-label="Alternar tema">🌙</button>
+    </header>
+
+    <main class="container">
+      <textarea id="pergunta" placeholder="Digite sua pergunta..."></textarea>
+      <div class="botoes">
+        <button id="enviarBtn" disabled>Enviar</button>
+        <button id="limparBtn" disabled>Limpar</button>
+      </div>
+
+      <div class="resposta" id="resposta"></div>
+      <button id="copiarBtn" style="display: none">📋 Copiar Resposta</button>
+    </main>
+
+    <footer>
+      <small>Exemplo responsivo com tema claro/escuro</small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

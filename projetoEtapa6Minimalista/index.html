@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chat IA - Mini Framework</title>
+    <link rel="stylesheet" href="framework.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-theme="light">
+    <header class="flex justify-between items-center p-4 card">
+      <h1 class="text-xl font-bold">💬 Chat com IA</h1>
+      <button id="themeToggle" class="btn btn-primary">🌙</button>
+    </header>
+
+    <main class="p-4 max-w-800">
+      <textarea
+        id="pergunta"
+        class="mb-2"
+        placeholder="Digite sua pergunta..."
+      ></textarea>
+      <div class="flex gap-2 flex-col-sm mb-2">
+        <button id="enviarBtn" class="btn btn-primary btn-disabled" disabled>
+          Enviar
+        </button>
+        <button id="limparBtn" class="btn btn-primary btn-disabled" disabled>
+          Limpar
+        </button>
+      </div>
+
+      <div id="resposta" class="card resposta mb-2"></div>
+      <button id="copiarBtn" class="btn btn-success" style="display: none">
+        📋 Copiar Resposta
+      </button>
+    </main>
+
+    <footer class="text-center p-2 card">
+      <small>Exemplo com mini-framework utilitário CSS</small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
