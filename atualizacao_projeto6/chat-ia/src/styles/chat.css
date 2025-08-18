@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
  /*Variáveis padrão (modo claro) */
@@ -9,6 +10,56 @@
   --assistant-msg: #f0f0f0;
   --primary: #007bff;
   --primary-hover: #0056b3;
+=======
+/* ==============================
+   Temas com variáveis globais
+   ============================== */
+:root {
+  /* Light Theme */
+  --bg: #ffffff;
+  --text: #333333;
+  --card: #f8f9fa;
+  --user-msg: #d0f0ff;
+  --assistant-msg: #f0f0f0;
+  --primary: #007bff;
+  --primary-hover: #0056b3;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg: #1e1e1e;
+  --text: #f0f0f0;
+  --card: #2a2a2a;
+  --user-msg: #2d5278;
+  --assistant-msg: #3a3a3a;
+  --primary: #3a6ea5;
+  --primary-hover: #2c5282;
+}
+
+/* 🌿 Boticário Theme */
+[data-theme="boticario"] {
+  --bg: #f5f5f5;
+  --text: #2e2e2e;
+  --card: #ffffff;
+  --user-msg: #006400;
+  --assistant-msg: #c5a572;
+  --primary: #006400;
+  --primary-hover: #004b23;
+}
+
+/* ==============================
+   Estrutura Responsiva
+   ============================== */
+.app {
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  padding: 1rem;
+>>>>>>> 1177629 (atualização add tema boticario)
 }
 
 /*Modo escuro*/
@@ -24,6 +75,7 @@
 
 /*Estilos gerais*/
 .chat-container {
+<<<<<<< HEAD
   max-width: 100%;
   width: 90%;
   margin: 2rem auto;
@@ -52,27 +104,55 @@ h1 {
 /* Mensagens */
 .messages {
   max-height: 50vh;
+=======
+  width: 100%;
+  max-width: 800px;
+  background-color: var(--card);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mensagens */
+.messages {
+  flex: 1;
+>>>>>>> 1177629 (atualização add tema boticario)
   overflow-y: auto;
   margin-bottom: 1rem;
-  padding-right: 0.5rem;
+  padding: 0.5rem;
 }
 
 .message {
   margin: 0.5rem 0;
+<<<<<<< HEAD
   padding: 0.75rem;
   border-radius: 8px;
   line-height: 1.4;
   white-space: pre-wrap;
   word-break: break-word;
+=======
+  padding: 0.8rem;
+  border-radius: 10px;
+  max-width: 85%;
+  word-wrap: break-word;
+>>>>>>> 1177629 (atualização add tema boticario)
 }
 
 .message.user {
   background-color: var(--user-msg);
+<<<<<<< HEAD
   text-align: right;
+=======
+  color: white;
+  margin-left: auto;
+>>>>>>> 1177629 (atualização add tema boticario)
 }
 
 .message.assistant {
   background-color: var(--assistant-msg);
+<<<<<<< HEAD
   text-align: left;
 }
 
@@ -84,10 +164,17 @@ h1 {
 }
 
 /*Controles */
+=======
+  margin-right: auto;
+}
+
+/* Controles */
+>>>>>>> 1177629 (atualização add tema boticario)
 .controls {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+<<<<<<< HEAD
   align-items: center;
   justify-content: center;
 }
@@ -111,8 +198,26 @@ button,
   color: white;
   border: none;
   padding: 0.6rem;
+=======
+}
+
+textarea, input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.8rem;
   border-radius: 8px;
+  border: 1px solid var(--primary);
+}
+
+button {
+  padding: 0.8rem 1rem;
+>>>>>>> 1177629 (atualização add tema boticario)
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  color: white;
   cursor: pointer;
+<<<<<<< HEAD
   transition: background-color 0.2s ease;
   display: flex;
   align-items: center;
@@ -123,13 +228,31 @@ button,
 button:hover,
 .upload-btn:hover {
   background-color: var(--primary-hover);
+=======
+  transition: background 0.2s;
 }
 
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+button:hover {
+  background: var(--primary-hover);
+>>>>>>> 1177629 (atualização add tema boticario)
 }
 
+/* ==============================
+   Responsividade
+   ============================== */
+@media (max-width: 768px) {
+  .chat-container {
+    padding: 0.8rem;
+  }
+  .controls {
+    flex-direction: column;
+  }
+  textarea, input, button {
+    width: 100%;
+  }
+}
+
+<<<<<<< HEAD
 .upload-btn input {
   display: none;
 }
@@ -168,3 +291,15 @@ button:has(svg.fa-volume-up) {
   }
 }
 
+=======
+@media (max-width: 480px) {
+  .message {
+    max-width: 95%;
+    font-size: 0.9rem;
+  }
+  button {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+}
+>>>>>>> 1177629 (atualização add tema boticario)

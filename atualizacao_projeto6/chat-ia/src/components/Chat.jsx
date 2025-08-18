@@ -139,11 +139,28 @@ const ChatApp = () => {
     URL.revokeObjectURL(url);
     toast.success("Histórico exportado!");
   };
+<<<<<<< HEAD
   
   // troca modo claro / escuro
   const toggleTheme = () => {
     setDarkMode((prev) => !prev);
   };
+=======
+
+ // const toggleTheme = () => {
+  //  setDarkMode((prev) => !prev);
+  //};
+
+  // Alternar entre light, dark e boticario
+  function toggleTheme() {
+    const current =
+      document.documentElement.getAttribute("data-theme") || "light";
+    const next =
+      current === "light" ? "dark" : current === "dark" ? "boticario" : "light";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+  }
+>>>>>>> 1177629 (atualização add tema boticario)
 
   // Upload de arquivos
   const handleFileUpload = async (e) => {
