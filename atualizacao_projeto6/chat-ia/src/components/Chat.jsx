@@ -7,8 +7,8 @@ import {
   FaSun,
   FaDownload,
   FaMicrophone,
-  FaUpload, 
-  FaVolumeUp
+  FaUpload,
+  FaVolumeUp,
 } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -20,7 +20,7 @@ const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
 const ChatApp = () => {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState(() => {
-  const saved = localStorage.getItem("chatHistory");
+    const saved = localStorage.getItem("chatHistory");
     return saved ? JSON.parse(saved) : [];
   });
   const [loading, setLoading] = useState(false);
@@ -47,26 +47,26 @@ const ChatApp = () => {
         setListening(false);
       };
 
-      recognition.onend = () => {       
+      recognition.onend = () => {
         setListening(false);
-      }
+      };
 
       recognitionRef.current = recognition;
     }
   }, []);
 
   const startListening = () => {
-  if (listening) {
-    toast.info("Já estou escutando...");
-    return;
-  }
+    if (listening) {
+      toast.info("Já estou escutando...");
+      return;
+    }
 
-  if (recognitionRef.current) {
-    recognitionRef.current.start();
-    setListening(true);
-  } else {
-    toast.error("Reconhecimento de voz não suportado.");
-  }
+    if (recognitionRef.current) {
+      recognitionRef.current.start();
+      setListening(true);
+    } else {
+      toast.error("Reconhecimento de voz não suportado.");
+    }
   };
 
   // envia a mensagem
@@ -97,7 +97,7 @@ const ChatApp = () => {
       setListening(false);
     }
   };
- 
+
   // copia resposta
   const copyLastMessage = () => {
     const last = messages[messages.length - 1];
@@ -108,14 +108,12 @@ const ChatApp = () => {
       toast.info("Nada para copiar ainda!");
     }
   };
- 
 
   // limpa campo de input
   const clearInput = () => {
     setInput("");
     toast.info("Campo de texto limpo!");
   };
-  
 
   // exporta conversa
   const exportHistory = () => {
@@ -125,7 +123,9 @@ const ChatApp = () => {
     }
 
     const content = messages
-      .map((msg) => `${msg.role === "user" ? "Você" : "Copilot"}: ${msg.content}`)
+      .map(
+        (msg) => `${msg.role === "user" ? "Você" : "Copilot"}: ${msg.content}`
+      )
       .join("\n\n");
 
     const blob = new Blob([content], { type: "text/plain" });
@@ -139,19 +139,15 @@ const ChatApp = () => {
     URL.revokeObjectURL(url);
     toast.success("Histórico exportado!");
   };
-<<<<<<< HEAD
-  
-  // troca modo claro / escuro
-  const toggleTheme = () => {
-    setDarkMode((prev) => !prev);
-  };
-=======
 
- // const toggleTheme = () => {
-  //  setDarkMode((prev) => !prev);
+  // troca modo claro / escuro
+
+  //const toggleTheme = () => {
+  // setDarkMode((prev) => !prev);
   //};
 
   // Alternar entre light, dark e boticario
+
   function toggleTheme() {
     const current =
       document.documentElement.getAttribute("data-theme") || "light";
@@ -160,7 +156,6 @@ const ChatApp = () => {
     document.documentElement.setAttribute("data-theme", next);
     localStorage.setItem("theme", next);
   }
->>>>>>> 1177629 (atualização add tema boticario)
 
   // Upload de arquivos
   const handleFileUpload = async (e) => {
@@ -184,20 +179,19 @@ const ChatApp = () => {
 
   // saida de audio
   const speakLastMessage = () => {
-  const last = messages[messages.length - 1];
+    const last = messages[messages.length - 1];
 
-  // Interrompe qualquer fala anterior
-  speechSynthesis.cancel();
-  if (last?.role === "assistant") {
-    const utterance = new SpeechSynthesisUtterance(last.content);
-    utterance.lang = "pt-BR"; // ou "en-US" se for inglês
-    speechSynthesis.speak(utterance);
-    toast.info("Lendo resposta em voz...");
-  } else {
-    toast.info("Nada para ler ainda!");
-  }
-};
-
+    // Interrompe qualquer fala anterior
+    speechSynthesis.cancel();
+    if (last?.role === "assistant") {
+      const utterance = new SpeechSynthesisUtterance(last.content);
+      utterance.lang = "pt-BR"; // ou "en-US" se for inglês
+      speechSynthesis.speak(utterance);
+      toast.info("Lendo resposta em voz...");
+    } else {
+      toast.info("Nada para ler ainda!");
+    }
+  };
 
   useEffect(() => {
     localStorage.setItem("chatHistory", JSON.stringify(messages));
@@ -229,17 +223,31 @@ const ChatApp = () => {
           onChange={(e) => setInput(e.target.value)}
           placeholder="Digite sua mensagem ou use voz/upload..."
         />
-        <button onClick={sendMessage}><FaPaperPlane /></button>
-        <button onClick={copyLastMessage}><FaCopy /></button>
-        <button onClick={clearInput}><FaEraser /></button>
-        <button onClick={exportHistory}><FaDownload /></button>
-        <button onClick={startListening}><FaMicrophone /></button>
-        <button onClick={speakLastMessage}><FaVolumeUp /></button>
-       
-        {<label className="upload-btn">
-          <FaUpload />
-          <input type="file" onChange={handleFileUpload} hidden />
-        </label>}
+        <button onClick={sendMessage}>
+          <FaPaperPlane />
+        </button>
+        <button onClick={copyLastMessage}>
+          <FaCopy />
+        </button>
+        <button onClick={clearInput}>
+          <FaEraser />
+        </button>
+        <button onClick={exportHistory}>
+          <FaDownload />
+        </button>
+        <button onClick={startListening}>
+          <FaMicrophone />
+        </button>
+        <button onClick={speakLastMessage}>
+          <FaVolumeUp />
+        </button>
+
+        {
+          <label className="upload-btn">
+            <FaUpload />
+            <input type="file" onChange={handleFileUpload} hidden />
+          </label>
+        }
       </div>
     </div>
   );

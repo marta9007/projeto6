@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-
-
- /*Variáveis padrão (modo claro) */
-:root {
-  --bg: #ffffff;
-  --text: #333333;
-  --card: #f0f0f0;
-  --user-msg: #d0f0ff;
-  --assistant-msg: #f0f0f0;
-  --primary: #007bff;
-  --primary-hover: #0056b3;
-=======
 /* ==============================
    Temas com variáveis globais
    ============================== */
@@ -59,58 +46,15 @@
   align-items: center;
   transition: all 0.3s ease;
   padding: 1rem;
->>>>>>> 1177629 (atualização add tema boticario)
 }
 
-/*Modo escuro*/
-.chat-container.dark {
-  --bg: #1e1e1e;
-  --text: #f0f0f0;
-  --card: #2a2a2a;
-  --user-msg: #2d5278;
-  --assistant-msg: #3a3a3a;
-  --primary: #3a6ea5;
-  --primary-hover: #2c5282;
-}
-
-/*Estilos gerais*/
 .chat-container {
-<<<<<<< HEAD
-  max-width: 100%;
-  width: 90%;
-  margin: 2rem auto;
-  padding: 1rem;
-  background-color: var(--bg);
-  color: var(--text);
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-h1 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--text);
-}
-
-/* Mensagens */
-.messages {
-  max-height: 50vh;
-=======
   width: 100%;
   max-width: 800px;
   background-color: var(--card);
   border-radius: 12px;
   padding: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
 }
@@ -118,7 +62,6 @@ h1 {
 /* Mensagens */
 .messages {
   flex: 1;
->>>>>>> 1177629 (atualização add tema boticario)
   overflow-y: auto;
   margin-bottom: 1rem;
   padding: 0.5rem;
@@ -126,82 +69,32 @@ h1 {
 
 .message {
   margin: 0.5rem 0;
-<<<<<<< HEAD
-  padding: 0.75rem;
-  border-radius: 8px;
-  line-height: 1.4;
-  white-space: pre-wrap;
-  word-break: break-word;
-=======
   padding: 0.8rem;
   border-radius: 10px;
   max-width: 85%;
   word-wrap: break-word;
->>>>>>> 1177629 (atualização add tema boticario)
 }
 
 .message.user {
   background-color: var(--user-msg);
-<<<<<<< HEAD
-  text-align: right;
-=======
   color: white;
   margin-left: auto;
->>>>>>> 1177629 (atualização add tema boticario)
 }
 
 .message.assistant {
   background-color: var(--assistant-msg);
-<<<<<<< HEAD
-  text-align: left;
-}
-
-.thinking {
-  font-style: italic;
-  color: #888;
-  text-align: center;
-  margin-top: 0.5rem;
-}
-
-/*Controles */
-=======
   margin-right: auto;
 }
 
 /* Controles */
->>>>>>> 1177629 (atualização add tema boticario)
 .controls {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-<<<<<<< HEAD
-  align-items: center;
-  justify-content: center;
 }
 
+textarea,
 input {
-  flex: 1 1 100%;
-  padding: 0.6rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  min-width: 200px;
-  background-color: var(--card);
-  color: var(--text);
-  border: 1px solid #555;
-}
-
-/*Botões */
-button,
-.upload-btn {
-  background-color: var(--primary);
-  color: white;
-  border: none;
-  padding: 0.6rem;
-=======
-}
-
-textarea, input {
   flex: 1;
   min-width: 200px;
   padding: 0.8rem;
@@ -211,30 +104,16 @@ textarea, input {
 
 button {
   padding: 0.8rem 1rem;
->>>>>>> 1177629 (atualização add tema boticario)
   border-radius: 8px;
   border: none;
   background: var(--primary);
   color: white;
   cursor: pointer;
-<<<<<<< HEAD
-  transition: background-color 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 40px;
-}
-
-button:hover,
-.upload-btn:hover {
-  background-color: var(--primary-hover);
-=======
   transition: background 0.2s;
 }
 
 button:hover {
   background: var(--primary-hover);
->>>>>>> 1177629 (atualização add tema boticario)
 }
 
 /* ==============================
@@ -247,51 +126,13 @@ button:hover {
   .controls {
     flex-direction: column;
   }
-  textarea, input, button {
+  textarea,
+  input,
+  button {
     width: 100%;
   }
 }
 
-<<<<<<< HEAD
-.upload-btn input {
-  display: none;
-}
-
-/* Botão de voz personalizado */
-button:has(svg.fa-volume-up) {
-  background-color: #28a745;
-}
-
-.chat-container.dark button:has(svg.fa-volume-up) {
-  background-color: #3c8c3c;
-}
-
-/* Responsividade  */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .controls {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  input {
-    width: 100%;
-  }
-
-  button,
-  .upload-btn {
-    width: 100%;
-  }
-
-  .messages {
-    max-height: 40vh;
-  }
-}
-
-=======
 @media (max-width: 480px) {
   .message {
     max-width: 95%;
@@ -302,4 +143,3 @@ button:has(svg.fa-volume-up) {
     padding: 0.6rem;
   }
 }
->>>>>>> 1177629 (atualização add tema boticario)
