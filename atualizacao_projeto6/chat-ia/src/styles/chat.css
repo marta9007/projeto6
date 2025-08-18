@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ==============================
    Temas com variáveis globais
    ============================== */
@@ -73,6 +74,73 @@
   border-radius: 10px;
   max-width: 85%;
   word-wrap: break-word;
+=======
+/* src/styles/chat.css */
+
+.chat-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-container {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.chat-container.dark {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.chat-container h1 {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.chat-container.dark h1 {
+  color: #f0f0f0;
+}
+
+
+.chat-container.dark .text {
+  background-color: #333;
+  color: #f0f0f0;
+  
+}
+
+.chat-container.dark input {
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #555;
+}
+
+.chat-container.dark button {
+  background-color: #444;
+  color: white;
+}
+
+.chat-container.dark button:hover {
+  background-color: #666;
+}
+
+
+.messages {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  padding-right: 0.5rem;
+}
+
+.message {
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  border-radius: 8px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+>>>>>>> parent of 2ec70b5 (inserindo img em assets e fazendo responsividade para telas moveis)
 }
 
 .message.user {
@@ -82,15 +150,26 @@
 }
 
 .message.assistant {
+<<<<<<< HEAD
   background-color: var(--assistant-msg);
   margin-right: auto;
+=======
+  background-color: #f0f0f0;
+  text-align: left;
 }
 
-/* Controles */
+.thinking {
+  font-style: italic;
+  color: #888;
+  text-align: center;
+  margin-top: 0.5rem;
+>>>>>>> parent of 2ec70b5 (inserindo img em assets e fazendo responsividade para telas moveis)
+}
+
 .controls {
   display: flex;
-  flex-wrap: wrap;
   gap: 0.5rem;
+<<<<<<< HEAD
 }
 
 textarea,
@@ -107,6 +186,62 @@ button {
   border-radius: 8px;
   border: none;
   background: var(--primary);
+=======
+  align-items: center;
+}
+
+input {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:has(svg.fa-volume-up) {
+  background-color: #28a745;
+}
+
+.chat-container.dark button:has(svg.fa-volume-up) {
+  background-color: #3c8c3c;
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.upload-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+>>>>>>> parent of 2ec70b5 (inserindo img em assets e fazendo responsividade para telas moveis)
   color: white;
   cursor: pointer;
   transition: background 0.2s;
@@ -116,6 +251,7 @@ button:hover {
   background: var(--primary-hover);
 }
 
+<<<<<<< HEAD
 /* ==============================
    Responsividade
    ============================== */
@@ -143,3 +279,9 @@ button:hover {
     padding: 0.6rem;
   }
 }
+=======
+.upload-btn input {
+  display: none;
+}
+
+>>>>>>> parent of 2ec70b5 (inserindo img em assets e fazendo responsividade para telas moveis)

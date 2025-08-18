@@ -69,7 +69,7 @@ const ChatApp = () => {
     }
   };
 
-  // envia a mensagem
+
   const sendMessage = async () => {
     if (!input.trim()) {
       toast.error("O campo está vazio!");
@@ -139,7 +139,12 @@ const ChatApp = () => {
     URL.revokeObjectURL(url);
     toast.success("Histórico exportado!");
   };
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+  
+>>>>>>> 01f2310 (Revert "inserindo img em assets e fazendo responsividade para telas moveis")
   // troca modo claro / escuro
 
   //const toggleTheme = () => {
@@ -156,6 +161,12 @@ const ChatApp = () => {
     document.documentElement.setAttribute("data-theme", next);
     localStorage.setItem("theme", next);
   }
+=======
+
+  const toggleTheme = () => {
+    setDarkMode((prev) => !prev);
+  };
+>>>>>>> parent of 2ec70b5 (inserindo img em assets e fazendo responsividade para telas moveis)
 
   // Upload de arquivos
   const handleFileUpload = async (e) => {
@@ -201,7 +212,7 @@ const ChatApp = () => {
     <div className={`chat-container ${darkMode ? "dark" : ""}`}>
       <ToastContainer />
       <div className="header">
-        <h1>🧠 Dr. Botica Responde</h1>
+        <h1>🧠 Copilot Clone com Gemini</h1>
         <button onClick={toggleTheme}>
           {darkMode ? <FaSun /> : <FaMoon />}
         </button>
@@ -223,6 +234,7 @@ const ChatApp = () => {
           onChange={(e) => setInput(e.target.value)}
           placeholder="Digite sua mensagem ou use voz/upload..."
         />
+<<<<<<< HEAD
         <button onClick={sendMessage}>
           <FaPaperPlane />
         </button>
@@ -248,6 +260,19 @@ const ChatApp = () => {
             <input type="file" onChange={handleFileUpload} hidden />
           </label>
         }
+=======
+        <button onClick={sendMessage}><FaPaperPlane /></button>
+        <button onClick={copyLastMessage}><FaCopy /></button>
+        <button onClick={clearInput}><FaEraser /></button>
+        <button onClick={exportHistory}><FaDownload /></button>
+        <button onClick={startListening}><FaMicrophone /></button>
+        <button onClick={speakLastMessage}><FaVolumeUp /></button>
+
+        <label className="upload-btn">
+          <FaUpload />
+          <input type="file" onChange={handleFileUpload} hidden />
+        </label>
+>>>>>>> 01f2310 (Revert "inserindo img em assets e fazendo responsividade para telas moveis")
       </div>
     </div>
   );
