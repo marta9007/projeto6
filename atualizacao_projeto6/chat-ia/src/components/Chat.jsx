@@ -20,7 +20,7 @@ const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
 const ChatApp = () => {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState(() => {
-    const saved = localStorage.getItem("chatHistory");
+  const saved = localStorage.getItem("chatHistory");
     return saved ? JSON.parse(saved) : [];
   });
   const [loading, setLoading] = useState(false);
@@ -69,7 +69,7 @@ const ChatApp = () => {
   }
   };
 
-
+  // envia a mensagem
   const sendMessage = async () => {
     if (!input.trim()) {
       toast.error("O campo está vazio!");
@@ -139,7 +139,8 @@ const ChatApp = () => {
     URL.revokeObjectURL(url);
     toast.success("Histórico exportado!");
   };
-
+  
+  // troca modo claro / escuro
   const toggleTheme = () => {
     setDarkMode((prev) => !prev);
   };
@@ -189,7 +190,7 @@ const ChatApp = () => {
     <div className={`chat-container ${darkMode ? "dark" : ""}`}>
       <ToastContainer />
       <div className="header">
-        <h1>🧠 Copilot Clone com Gemini</h1>
+        <h1>🧠 Dr. Botica Responde</h1>
         <button onClick={toggleTheme}>
           {darkMode ? <FaSun /> : <FaMoon />}
         </button>
@@ -217,11 +218,11 @@ const ChatApp = () => {
         <button onClick={exportHistory}><FaDownload /></button>
         <button onClick={startListening}><FaMicrophone /></button>
         <button onClick={speakLastMessage}><FaVolumeUp /></button>
-
-        <label className="upload-btn">
+       
+        {<label className="upload-btn">
           <FaUpload />
           <input type="file" onChange={handleFileUpload} hidden />
-        </label>
+        </label>}
       </div>
     </div>
   );
