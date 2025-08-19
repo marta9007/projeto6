@@ -1,60 +1,141 @@
-﻿# 🤖 Assistente de IA — OpenRouter
+﻿# 🤖 Assistente de IA Web — Projeto 6  
 
-Este projeto é um assistente de inteligência artificial feito em **JavaScript**, consumindo a **API do OpenRouter**. O usuário pode fazer perguntas e receber respostas diretamente na tela.
+Este projeto é um **assistente de IA Web** que permite conversar com modelos de linguagem da **Google Gemini API** de forma simples e interativa.  
+Foi desenvolvido em etapas, começando com a integração básica e evoluindo para uma interface mais rica em funcionalidades e experiência do usuário. 
+
+---
+
+## 🧠 Tecnologias Utilizadas  
+
+- **HTML + CSS + JavaScript** — Estrutura, estilo e interatividade  
+- **Google Gemini API** — Inteligência artificial generativa  
+- **Web Speech API** — Entrada e saída de voz no navegador  
+- **Navigator Clipboard API** — Copiar respostas para a área de transferência  
+- **LocalStorage** — Armazenar chave de API e histórico (opcional)
+
+---
+## 🔐 API Utilizada  
+
+- **Google Gemini API**  
+  - Modelos suportados: `gemini-1.5-pro` ou `gemini-1.5-flash`  
+  - Chave gerada via [Google AI Studio](https://aistudio.google.com/app/apikey)  
+  - SDK: `@google/generative-ai`  
+---
+
+## 📦 Dependências
+
+Instale com:
+
+```bash
+npm install @google/generative-ai react-icons react-toastify
+```
+
+---
+
+## ⚙️ Variáveis de Ambiente
+
+Crie um arquivo `.env` na raiz do projeto:
+
+```env
+VITE_GEMINI_API_KEY=AIza...sua_chave_aqui
+```
 
 ---
 
 ## 🚀 Funcionalidades
 
-- Enviar perguntas para um modelo de IA via API do OpenRouter
-- Exibir a resposta recebida na tela
-- Botão para copiar resposta
-- Botão para limpar campos
-- Mensagens de carregamento e tratamento básico de erros
+### 📄 Parte 1 — Funcionalidades iniciais  
+- Enviar perguntas para o modelo Gemini  
+- Receber respostas em tempo real  
+- Interface básica com HTML/CSS  
+- Integração com API da Google 
+
+### ✨ Parte 2 — Novas funcionalidades (UX e usabilidade)  
+- **Botão Limpar**: apaga pergunta e resposta atuais  
+- **Botão Copiar**: copia resposta para a área de transferência  
+- **Mostrar pergunta junto da resposta** para contexto  
+- **Interface reorganizada** com botões intuitivos e ícones  
+- **Layout mobile-first**: responsividade melhorada 
+- **Feedback visual e animações** em botões e transições  
+- **Contador de caracteres** no campo de entrada  
+- **Modo dark/light** para conforto do usuário  
+
+
+### 📨 Próximos Passos*
+- Histórico de conversas - Salvar perguntas anteriores **(em construção)**
+- Suporte a múltiplos provedores de IA **(em construção)**
+- Exportar conversas em arquivo **(em construção)**
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🖱️ Função de cada botão  
 
-- HTML5
-- CSS3
-- JavaScript (ES6)
-- Node.js com Express
-- [OpenRouter API](https://openrouter.ai/)
+| Ícone/Texto      | Função                                |  
+|------------------|----------------------------------------|  
+| 📨 Enviar        | Envia a pergunta para a IA              |  
+| 🧽 Limpar        | Limpa pergunta e resposta               |  
+| 📋 Copiar        | Copia a resposta para a área de transferência |  
+| 🎙️ Microfone    | Entrada de voz (Web Speech API)         |  
+| 🔊 Ouvir         | Lê em voz alta a resposta da IA         |  
+| 📁 Upload        | Enviar arquivo `.txt` ou `.pdf`         |  
+| 📥 Exportar      | Baixar histórico da conversa            |  
+| 🌙 / ☀️ Tema     | Alternar entre modo escuro e claro      |  
 
----
 
-## 📦 Como usar
-- Link do deploy: https://marta9007.github.io/projeto6/
+## 📚 📌 Conclusão: Este projeto foi desenvolvido para permitir aprender sobre:  
 
-  ou
-  
-- git clone https://github.com/marta9007
-- Abra o arquivo index.html no navegador
-- Digite um Pergunta e clique em Pesquisar **(Estamos usando uma API gratuita e esta possui poucos créditos diários para pesquisa)**
-
----
-
-## 📌 Conclusão
-
-Este projeto foi desenvolvido de forma simples, permitindo aprender sobre:
-
-- Uso de `document.getElementById()` e `querySelector()` para capturar e atualizar elementos na página
-- Consumo de APIs usando `fetch()` com `async/await`
-- Criação e uso de uma API Key no OpenRouter
-- Consulta à documentação oficial para entender parâmetros e modelos disponíveis
-- Tratamento de erros e boas práticas de experiência do usuário
+- Manipulação do **DOM** com `document.getElementById` para capturar e atualizar elementos  
+- Consumo de APIs usando `fetch()` com `async/await`  
+- Tratamento de erros para melhorar a experiência do usuário  
+- Uso da **Clipboard API** para copiar texto  
+- Uso da **Web Speech API** para entrada e saída de voz  
+- Aplicação de **responsividade mobile-first** com CSS  
+- Criação de botões intuitivos com ícones e feedback visual  
+- Implementação de **animações** para melhorar a interação  
+- Organização e clareza no código, mantendo acessível para iniciantes  
 
 ---
 
-## 👨‍💻 Desenvolvido por
+## 📌 Observações
 
-- [Andrelis](https://github.com/Andrelissg)
+- A chave da API deve ser gerada no [Google AI Studio](https://aistudio.google.com/app/apikey)
+- O projeto salva o histórico no `localStorage`
+- O campo de input é validado para evitar envios vazios
+- O modo escuro não afeta a legibilidade do título ou botões
+
+---
+
+## 🧪 Teste local
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## 📤 Deploy sugerido
+
+- **Vercel** ou **Netlify**
+- Lembre-se de configurar a variável `VITE_GEMINI_API_KEY` no painel de ambiente
+
+---
+---
+
+## 👨‍💻 Projeto desenvolvido como exercício prático de aprendizado por:
+
+- [Andrelis Scheppa](https://github.com/Andrelissg)
+- [Daiane Bandeira](https://github.com/Daiane-source)
 - [Fábio Costa Silva](https://github.com/fabiocosta123)
 - [Fernando Maurício](https://github.com/Fernando-Roque)
 - [Jeferson valentim](https://github.com/jefersonvalentimvenancio)
 - [Marta_Gomes](https://github.com/marta9007)
 - [Nediane Silva Dos Prazeres](https://github.com/NedianePrazeres)
+
+Inspirado na experiência de chat com IA, adaptado para uso com a API Gemini. 
+
+
+
 
 
 <br>
@@ -238,6 +319,67 @@ funcional que:
 
 Este projeto serve como uma excelente base para entender como construir aplicações web
 modernas usando tecnologias fundamentais da web!
+
+# Assistente de IA Web (Parte 2)
+
+Nesta segunda parte do projeto, vamos melhorar nossa aplicação de IA adicionando
+funcionalidades importantes: botão para limpar resposta, botão para copiar
+resposta, e outras melhorias na experiência do usuário.
+
+## Recapitulação da Parte 1
+
+Até então criamos:
+• Interface básica com HTML/CSS
+• Integração com API da OpenAI <br>
+
+## Objetivos da Parte 2
+
+Agora vamos adicionar:
+
+1. Botão "Limpar" - Para limpar a resposta atual
+2. Botão "Copiar" - Para copiar a resposta da IA
+3. Melhorias na Interface - UX mais polida
+4. Responsividade melhorada - Mobile-first
+
+# Novas Funcionalidades
+
+### 01 - Botão Limpar Resposta
+
+• Botão para limpar a resposta atual da tela
+• Deve esconder a seção de resposta
+• Deve limpar o campo de pergunta também
+• Confirmar ação antes de limpar (opcional)
+
+### 02 - Botão Copiar Resposta
+
+• Botão para copiar o texto da resposta da IA
+• Usar navigator.clipboard API
+• Feedback visual quando copiado com sucesso
+• Tratamento de erro se clipboard não disponível
+
+### 03 - Melhorias na Interface
+
+• Mostrar a pergunta feita junto com a resposta
+• Botões organizados de forma intuitiva
+• Ícones nos botões para melhor UX
+• Animações de entrada para elementos
+
+### 04 - Responsividade Aprimorada
+
+• Layout otimizado para mobile
+• Botões com tamanhos adequados para touch
+• Textos legíveis em telas pequenas
+
+### 05 - Funcionalidades Extras
+
+• Contador de caracteres no textarea
+• Salvar API Key no localStorage (opcional)
+Próximos Passos (Ideias para Extensão)
+• Histórico de conversas - Salvar perguntas anteriores
+• Temas - Dark mode / Light mode
+• Múltiplos provedores - Anthropic, Google, etc.
+• Markdown rendering - Para respostas formatadas
+• Export - Salvar conversas em arquivo ou PDF
 
 
 
