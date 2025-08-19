@@ -1,4 +1,4 @@
-﻿# 🤖 Assistente de IA Web — Projeto 6  
+﻿# 🤖 Assistente de IA Web —  Projeto 6  
 
 Este projeto é um **assistente de IA Web** que permite conversar com modelos de linguagem da **Google Gemini API** de forma simples e interativa.  
 Foi desenvolvido em etapas, começando com a integração básica e evoluindo para uma interface mais rica em funcionalidades e experiência do usuário. 
@@ -380,6 +380,7 @@ Próximos Passos (Ideias para Extensão)
 • Múltiplos provedores - Anthropic, Google, etc.
 • Markdown rendering - Para respostas formatadas
 • Export - Salvar conversas em arquivo ou PDF
+
 
 
 
